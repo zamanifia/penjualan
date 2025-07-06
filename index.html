@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buketku | Buket Uang & Bunga Eksklusif</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fafafa;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #f7f9fc 100%);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .discount-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #ef4444;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            font-weight: bold;
+            border-radius: 0 0 0 0.5rem;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        
+        footer {
+            background: linear-gradient(to right, #4f46e5, #7c3aed);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c292a30e-9962-469b-ae8b-9c990a17176e.png" alt="Logo Buket Kejutan - Buket bunga dengan uang kertas melingkar dalam warna merah muda dan emas" class="h-12 w-12 object-contain">
+                <h1 class="text-xl font-bold text-purple-900">Buketku</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-purple-700 font-medium">Beranda</a>
+                <a href="#produk" class="text-gray-700 hover:text-purple-700 font-medium">Produk</a>
+                <a href="#testimoni" class="text-gray-700 hover:text-purple-700 font-medium">Testimoni</a>
+                <a href="#tentang" class="text-gray-700 hover:text-purple-700 font-medium">Tentang Kami</a>
+                <a href="#kontak" class="text-gray-700 hover:text-purple-700 font-medium">Kontak</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="relative text-gray-700 hover:text-purple-700">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-purple-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </button>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Buketku</h1>
+                <p class="text-lg text-gray-600 mb-6">Hadiah unik berupa kombinasi bunga segar dan uang dalam bentuk buket yang elegan dan berkesan.</p>
+                <div class="flex flex-wrap gap-3">
+                    <button class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Lihat Koleksi</button>
+                    <button class="border border-purple-600 text-purple-600 hover:bg-purple-50 px-6 py-3 rounded-lg font-medium transition duration-300">Custom Order</button>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="image/bunga 1.jpg" alt="Buket uang premium dengan bunga merah muda dan kelopak putih dalam kemasan kertas mewah, diatur di atas meja kayu dengan pencahayaan profesional" class="rounded-lg shadow-xl w-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Kategori Produk</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-purple-50 rounded-xl p-6 text-center cursor-pointer hover:bg-purple-100 transition duration-300">
+                    <i class="fas fa-money-bill-wave text-3xl text-purple-600 mb-3"></i>
+                    <h3 class="font-semibold text-gray-800">Buket Uang</h3>
+                </div>
+                <div class="bg-pink-50 rounded-xl p-6 text-center cursor-pointer hover:bg-pink-100 transition duration-300">
+                    <i class="fas fa-birthday-cake text-3xl text-pink-600 mb-3"></i>
+                    <h3 class="font-semibold text-gray-800">Ulang Tahun</h3>
+                </div>
+                <div class="bg-blue-50 rounded-xl p-6 text-center cursor-pointer hover:bg-blue-100 transition duration-300">
+                    <i class="fas fa-ring text-3xl text-blue-600 mb-3"></i>
+                    <h3 class="font-semibold text-gray-800">Lamaran</h3>
+                </div>
+                <div class="bg-green-50 rounded-xl p-6 text-center cursor-pointer hover:bg-green-100 transition duration-300">
+                    <i class="fas fa-heart text-3xl text-green-600 mb-3"></i>
+                    <h3 class="font-semibold text-gray-800">Valentine</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produk" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-900">Produk Unggulan</h2>
+                <a href="#" class="text-purple-600 hover:text-purple-800 font-medium flex items-center">
+                    Lihat Semua <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-500">
+                    <div class="relative">
+                        <img src="image/bunga 2.jpeg" alt="Buket uang spiral dengan bunga baby breath putih dan dekorasi pita emas, dijepret dari sudut pandang samping" class="w-full h-48 object-cover">
+                        <span class="discount-badge">10%</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-gray-800 mb-1">Kategori Biasa</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">4.5 (120)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-gray-500 line-through text-sm">Rp 1.200.000</p>
+                                <p class="font-bold text-purple-700">Rp 1.080.000</p>
+                            </div>
+                            <button class="bg-purple-100 text-purple-700 hover:bg-purple-200 p-2 rounded-full">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-500">
+                    <div class="relative">
+                        <img src="image/bunga 3.jpg" alt="Buket uang berbentuk hati dengan bunga mawar merah dan dekorasi daun eucalyptus, ditampilkan dari depan dengan cahaya natural" class="w-full h-48 object-cover">
+                        <span class="discount-badge">Baru!</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-gray-800 mb-1">Kategori sedang</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">4.0 (95)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="font-bold text-purple-700">Rp 1.500.000</p>
+                            <button class="bg-purple-100 text-purple-700 hover:bg-purple-200 p-2 rounded-full">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-500">
+                    <div class="relative">
+                        <img src="image/bunga 4.webp" alt="Buket uang dalam kotak kaca premium dengan bunga hydrangea biru dan ungu, ditampilkan dengan pencahayaan dramatis" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-gray-800 mb-1">Kategori Premium</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">5.0 (78)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="font-bold text-purple-700">Rp 2.200.000</p>
+                            <button class="bg-purple-100 text-purple-700 hover:bg-purple-200 p-2 rounded-full">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-500">
+                    <div class="relative">
+                        <img src="image/buket uang.png">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-gray-800 mb-1">Buket uang</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">5.0 (65)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="font-bold text-purple-700">Rp 1.800.000</p>
+                            <button class="bg-purple-100 text-purple-700 hover:bg-purple-200 p-2 rounded-full">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimoni" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Apa Kata Pelanggan Kami?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/691eab81-c460-4d15-acc9-2e70e0249267.png" alt="Foto profil perempuan profesional berusia 30-an dengan senyum tulus" class="rounded-full h-12 w-12 object-cover">
+                        <div class="ml-3">
+                            <h4 class="font-semibold text-gray-800">Siti Raudatul Wulandari</h4>
+                            <p class="text-gray-500 text-sm">Bondowoso</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic">"Buket uang untuk ulang tahun ibu saya sangat istimewa. Desainnya elegan dan uangnya disusun dengan kreatif. Ibu sampai terharu!"</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7511e37a-bdae-44ab-afae-9b8eeefff9ff.png" alt="Foto profil pria muda tersenyum menggunakan kemeja formal" class="rounded-full h-12 w-12 object-cover">
+                        <div class="ml-3">
+                            <h4 class="font-semibold text-gray-800">M.Reyhan Burhanudin</h4>
+                            <p class="text-gray-500 text-sm">Bondowoso</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-600 italic">"Pakai buket uang untuk lamaran, langsung diterima! Ga hanya cantik, tapi juga sangat berarti. Pelayanannya cepat dan ramah."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/203bfa2d-82d0-4206-bf7a-970e3b38165d.png" alt="Foto profil perempuan muda dengan gaya kasual dan ekspresi senang" class="rounded-full h-12 w-12 object-cover">
+                        <div class="ml-3">
+                            <h4 class="font-semibold text-gray-800">Muflihatul Hasanah</h4>
+                            <p class="text-gray-500 text-sm">Bondowoso</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic">"Perfect untuk anniversary ke-3 kami! Pasangannya suka banget sama buketnya. Pengiriman tepat waktu dan packing sangat aman."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9e387bc3-1a5a-4692-abde-d4dc1b380c6a.png" alt="Tim Buket Kejutan yang terdiri dari 4 orang sedang tersenyum di studio kerja mereka dengan berbagai contoh buket di latar belakang" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Tentang Buketku</h2>
+                    <p class="text-gray-600 mb-4">Kami adalah spesialis dalam kreasi buket uang dan bunga yang elegan untuk berbagai momen spesial. Dengan pengalaman lebih dari 5 tahun, kami telah membantu ribuan pelanggan memberikan kejutan yang berkesan.</p>
+                    <p class="text-gray-600 mb-6">Setiap buket kami dibuat dengan penuh cinta dan perhatian terhadap detail, menggabungkan kerajinan tangan berkualitas tinggi dengan bahan-bahan premium.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <div class="bg-purple-100 text-purple-700 rounded-full h-10 w-10 flex items-center justify-center mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="font-medium text-gray-800">Garansi Kepuasan</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-purple-100 text-purple-700 rounded-full h-10 w-10 flex items-center justify-center mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="font-medium text-gray-800">Bahan Premium</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-purple-100 text-purple-700 rounded-full h-10 w-10 flex items-center justify-center mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="font-medium text-gray-800">Pengiriman Cepat</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-purple-100 text-purple-700 rounded-full h-10 w-10 flex items-center justify-center mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="font-medium text-gray-800">Custom Sesuai Permintaan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16" style="background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Siap Memberikan Kejutan?</h2>
+            <p class="text-purple-100 mb-8 text-lg max-w-2xl mx-auto">Pesan sekarang dan buat momen spesial mereka menjadi lebih berkesan dengan buket eksklusif kami.</p>
+            <button class="bg-white text-purple-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-bold text-lg transition duration-300">Pesan Sekarang</button>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Pertanyaan yang Sering Diajukan</h2>
+            
+            <div class="space-y-4">
+                <div class="border-b border-gray-200 pb-4">
+                    <button class="faq-btn flex justify-between items-center w-full text-left group">
+                        <h3 class="font-semibold text-gray-800 group-hover:text-purple-700">Berapa lama waktu pembuatan buket?</h3>
+                        <i class="fas fa-plus text-purple-600 group-hover:text-purple-800"></i>
+                    </button>
+                    <div class="faq-content hidden pt-2 text-gray-600">
+                        <p>Waktu pembuatan standar adalah 2-3 hari kerja setelah konfirmasi pemesanan. Untuk pesanan custom atau dalam jumlah besar mungkin membutuhkan waktu lebih lama.</p>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-4">
+                    <button class="faq-btn flex justify-between items-center w-full text-left group">
+                        <h3 class="font-semibold text-gray-800 group-hover:text-purple-700">Apakah nominal uang bisa disesuaikan?</h3>
+                        <i class="fas fa-plus text-purple-600 group-hover:text-purple-800"></i>
+                    </button>
+                    <div class="faq-content hidden pt-2 text-gray-600">
+                        <p>Tentu saja! Anda bisa memilih nominal sesuai kebutuhan dan budget Anda. Kami akan memberikan saran terbaik untuk menyusunnya secara estetik.</p>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-4">
+                    <button class="faq-btn flex justify-between items-center w-full text-left group">
+                        <h3 class="font-semibold text-gray-800 group-hover:text-purple-700">Apakah bunga yang digunakan bunga segar?</h3>
+                        <i class="fas fa-plus text-purple-600 group-hover:text-purple-800"></i>
+                    </button>
+                    <div class="faq-content hidden pt-2 text-gray-600">
+                        <p>Kami menggunakan bunga segar berkualitas tinggi yang dipilih dengan teliti untuk memastikan kesegaran dan daya tahan yang maksimal. Kami juga menyediakan opsi bunga preservasi untuk yang menginginkan bunga tahan lama.</p>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-4">
+                    <button class="faq-btn flex justify-between items-center w-full text-left group">
+                        <h3 class="font-semibold text-gray-800 group-hover:text-purple-700">Bagaimana cara pemesanan custom?</h3>
+                        <i class="fas fa-plus text-purple-600 group-hover:text-purple-800"></i>
+                    </button>
+                    <div class="faq-content hidden pt-2 text-gray-600">
+                        <p>Anda bisa menghubungi kami melalui WhatsApp atau formulir di website untuk mendiskusikan kebutuhan spesial Anda. Tim kami akan membantu merealisasikan ide Anda menjadi buket yang sempurna.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Hubungi Kami</h2>
+                    <p class="text-gray-600 mb-6">Kami siap membantu Anda menemukan buket sempurna untuk momen spesial Anda.</p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="bg-purple-100 text-purple-700 rounded-full h-10 w-10 flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p class="text-gray-600">Jl. Gagak Hitam Maesan, Bondowoso</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-purple-100 text-purple-700 rounded-full h-10 w-10 flex items-center justify-center mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <p class="text-gray-600">+62 812-3456-7890</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-purple-100 text-purple-700 rounded-full h-10 w-10 flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <p class="text-gray-600">Buketku@gmail,com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-blue-600 text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-700">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-pink-600 text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-pink-700">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-blue-400 text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-green-500 text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-green-600">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Kirim Pesan</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Nama Lengkap</label>
+                                <input type="text" id="name" placeholder="Nama Anda" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" placeholder="email@contoh.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 mb-2">Pesan Anda</label>
+                                <textarea id="message" rows="4" placeholder="Tulis pesan Anda di sini..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-medium transition duration-300">Kirim Pesan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fa9e8b7b-dd44-4fb5-8f2c-2a3c3b1df53e.png" alt="Logo kecil Buket Kejutan dalam versi monokrom putih" class="h-10 w-10 object-contain">
+                        <h3 class="text-xl font-bold">Buketku</h3>
+                    </div>
+                    <p class="text-purple-200 max-w-sm">Spesialis buket uang dan bunga premium untuk berbagai momen spesial dengan sentuhan elegan dan berkelas.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Navigasi</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-purple-200 hover:text-white">Beranda</a></li>
+                            <li><a href="#produk" class="text-purple-200 hover:text-white">Produk</a></li>
+                            <li><a href="#testimoni" class="text-purple-200 hover:text-white">Testimoni</a></li>
+                            <li><a href="#tentang" class="text-purple-200 hover:text-white">Tentang Kami</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Layanan</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-purple-200 hover:text-white">Pemesanan</a></li>
+                            <li><a href="#" class="text-purple-200 hover:text-white">Custom Order</a></li>
+                            <li><a href="#" class="text-purple-200 hover:text-white">Pengiriman</a></li>
+                            <li><a href="#" class="text-purple-200 hover:text-white">Garansi</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-purple-200 hover:text-white">Syarat & Ketentuan</a></li>
+                            <li><a href="#" class="text-purple-200 hover:text-white">Kebijakan Privasi</a></li>
+                            <li><a href="#" class="text-purple-200 hover:text-white">FAQ</a></li>
+                            <li><a href="#" class="text-purple-200 hover:text-white">Kontak</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-purple-300 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-purple-200 mb-4 md:mb-0">© 2022 Buketku</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-purple-200 hover:text-white"><i class="fab fa-cc-visa"></i></a>
+                    <a href="#" class="text-purple-200 hover:text-white"><i class="fab fa-cc-mastercard"></i></a>
+                    <a href="#" class="text-purple-200 hover:text-white"><i class="fab fa-cc-paypal"></i></a>
+                    <a href="#" class="text-purple-200 hover:text-white"><i class="fab fa-cc-discover"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out hidden md:hidden">
+        <div class="flex justify-end p-4">
+            <button id="close-mobile-menu" class="text-gray-700">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#home" class="text-gray-700 text-xl font-medium">Beranda</a>
+            <a href="#produk" class="text-gray-700 text-xl font-medium">Produk</a>
+            <a href="#testimoni" class="text-gray-700 text-xl font-medium">Testimoni</a>
+            <a href="#tentang" class="text-gray-700 text-xl font-medium">Tentang Kami</a>
+            <a href="#kontak" class="text-gray-700 text-xl font-medium">Kontak</a>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('nav + button.md\\:hidden');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenu.classList.remove('translate-x-full');
+            }, 20);
+        });
+        
+        closeMobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        });
+        
+        // FAQ functionality
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                } else {
+                    content.classList.add('hidden');
+                    icon.classList.add('fa-plus');
+                    icon.classList.remove('fa-minus');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add to cart animation
+        document.querySelectorAll('[aria-label="Add to cart"]').forEach(button => {
+            button.addEventListener('click', function() {
+                const cartCount = document.querySelector('.relative span');
+                let count = parseInt(cartCount.textContent);
+                cartCount.textContent = count + 1;
+                
+                // Animation
+                cartCount.classList.add('animate-ping');
+                setTimeout(() => {
+                    cartCount.classList.remove('animate-ping');
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
+
